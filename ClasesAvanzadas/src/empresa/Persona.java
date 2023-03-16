@@ -22,8 +22,11 @@ public class Persona {
     private int añoNacimiento;
     private String direccion;
     private String nombre;
-    public Persona(){
 
+    public Persona(int añoNacimiento, String direccion, String nombre) {
+        this.añoNacimiento = añoNacimiento;
+        this.direccion = direccion;
+        this.nombre = nombre;
     }
 
     public int getAñoNacimiento() {
@@ -48,5 +51,12 @@ public class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        String cadena = "Detos del Empleado: " + "\nNombre: " + getNombre() + "\nDriección: " + getDireccion()
+                + "\nAño de Nacimiento:  " + getAñoNacimiento();
+        return cadena;
     }
 }

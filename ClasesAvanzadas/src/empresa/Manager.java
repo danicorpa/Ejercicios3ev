@@ -10,6 +10,8 @@ package empresa;
  * @deprecated Method deprecated
  */
 
+import java.time.LocalDate;
+
 /**
  * @param
  * @see ""
@@ -21,7 +23,11 @@ public class Manager extends Empleado{
 
 
     private boolean sonrisa;
-    public Manager(){}
+
+    public Manager(int añoNacimiento, String direccion, String nombre, LocalDate fechaInicio, long salario, boolean sonrisa) {
+        super(añoNacimiento, direccion, nombre, fechaInicio, salario);
+        this.sonrisa = sonrisa;
+    }
 
     public boolean isSonrisa() {
         return sonrisa;
@@ -30,4 +36,14 @@ public class Manager extends Empleado{
     public void setSonrisa(boolean sonrisa) {
         this.sonrisa = sonrisa;
     }
+
+    @Override
+    public String toString() {
+
+        if (!sonrisa){
+        return "Este Manager no suele sontreir!! Cuidado con hacer bromas!!!";
+        } else {
+            return "Este Manager es un vacilón, le mola mucho el cachondeo!!!";
+            }
+        }
 }
