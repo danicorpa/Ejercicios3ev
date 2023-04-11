@@ -1,14 +1,15 @@
-package angeles_demonios;
+package ejercicio11;
 /**
  * @author Daniel Martin Corpa
- * 29/3/23
- * 16:53
+ * 11/4/23
+ * 18:37
  * @version version of class
  * @return value to return
  * @throws Errors that throws
  * @since since version
  * @deprecated Method deprecated
  */
+
 
 /**
  * @param
@@ -17,17 +18,16 @@ package angeles_demonios;
  */
 
 
-public class CampoDeBatalla {
+public class Main {
 
-    public CampoDeBatalla() {
-    }
-    public static void luchar(Humano fr){
-
-
-    }
     public static void main(String[] args) {
 
-        Humano h1 = new Humano (50);
+        Relacionable r = new Relacionable();
+        r.setA(5);
+        System.out.println(r.esIgual(5));
+        System.out.println(r.esMayor(5));
+        System.out.println(r.esMenor(5));
+
 
 
 
