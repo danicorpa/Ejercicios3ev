@@ -44,7 +44,19 @@ public class Main {
         imprimrSocios(socios);
         System.out.println("Imprime colocado por Nombre: ");
 
+        System.out.println("Compara por id de socio: ");
+        ComparaIdSocio comparaSocio = new ComparaIdSocio();
+        socios.sort(comparaSocio);
+        imprimrSocios(socios);
 
+        System.out.println("Compara por Nombre: ");
+        ComparaNombre comparaSocioNombre = new ComparaNombre();
+        socios.sort(comparaSocioNombre);
+        imprimrSocios(socios);
+
+        System.out.println("Compara por Nombre al reves: ");
+        socios.sort(comparaSocioNombre.reversed());
+        imprimrSocios(socios);
 
     }
 

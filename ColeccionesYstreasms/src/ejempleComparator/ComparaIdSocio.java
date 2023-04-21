@@ -1,8 +1,8 @@
 package ejempleComparator;
 /**
  * @author Daniel Martin Corpa
- * 13/4/23
- * 20:15
+ * 21/4/23
+ * 17:49
  * @version version of class
  * @return value to return
  * @throws Errors that throws
@@ -19,16 +19,20 @@ import java.util.Comparator;
  */
 
 
-public class ComparaNombre implements Comparator {
+public class ComparaIdSocio implements Comparator {
 
     @Override
     public int compare(Object o1, Object o2){
-
         Socio socio1 = (Socio) o1;
         Socio socio2 = (Socio) o2;
+      /*  if(socio1.idSocio < socio2.idSocio){
+            return -1;
+        } else if(socio1.idSocio > socio2.idSocio){
+            return 1;
+        } else {
+            return 0;
+        }*/
 
-        return socio1.nombre.compareToIgnoreCase(socio2.nombre);
-            //return 1;
-
+        return socio1.idSocio - socio2.idSocio;
     }
 }
